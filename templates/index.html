@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<style>
+div {
+  background-image: url('dsmiley-2979107_960_720-960x539.jpg');
+}
+</style>
+<head>
+  <meta charset="UTF-8">
+  <title>Deployment Satyake  Sourced from-@amman</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body style="background: #000;">
+ <div class="login">
+	<h1>Financial news sentiment</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('pred')}}"method="post">
+    	<input type="text" name="Enter Financial news" placeholder="Agis0" required="required" />
+        
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Click here to find out the sentiment.</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
